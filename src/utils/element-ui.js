@@ -47,8 +47,6 @@ import {
   CollapseItem,
   Transfer,
   Loading,
-  MessageBox,
-  Message,
   Scrollbar,
   Tooltip,
   Breadcrumb,
