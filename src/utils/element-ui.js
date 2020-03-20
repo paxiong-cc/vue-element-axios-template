@@ -1,0 +1,113 @@
+import 'element-ui/lib/theme-chalk/index.css'
+import Vue from 'vue'
+import {
+  Step,
+  Steps,
+  Pagination,
+  Dialog,
+  Autocomplete,
+  Dropdown,
+  DropdownMenu,
+  DropdownItem,
+  Menu,
+  Submenu,
+  MenuItem,
+  MenuItemGroup,
+  Input,
+  InputNumber,
+  Radio,
+  RadioGroup,
+  RadioButton,
+  Cascader,
+  Checkbox,
+  CheckboxButton,
+  CheckboxGroup,
+  Switch,
+  Select,
+  Option,
+  OptionGroup,
+  Button,
+  ButtonGroup,
+  Table,
+  TableColumn,
+  DatePicker,
+  Form,
+  FormItem,
+  Tabs,
+  TabPane,
+  Tag,
+  Alert,
+  Slider,
+  Icon,
+  Row,
+  Col,
+  Upload,
+  Badge,
+  Collapse,
+  CollapseItem,
+  Transfer,
+  Loading,
+  MessageBox,
+  Message,
+  Scrollbar,
+  Tooltip,
+  Breadcrumb,
+  BreadcrumbItem,
+  Carousel,
+  CarouselItem
+} from 'element-ui'
+
+Vue.use(Carousel)
+Vue.use(CarouselItem)
+Vue.use(BreadcrumbItem)
+Vue.use(Breadcrumb)
+Vue.use(Step)
+Vue.use(Steps)
+Vue.use(Tooltip)
+Vue.use(Pagination)
+Vue.use(Dialog)
+Vue.use(Autocomplete)
+Vue.use(Dropdown)
+Vue.use(DropdownMenu)
+Vue.use(DropdownItem)
+Vue.use(Menu)
+Vue.use(Submenu)
+Vue.use(MenuItem)
+Vue.use(MenuItemGroup)
+Vue.use(Input)
+Vue.use(InputNumber)
+Vue.use(Radio)
+Vue.use(RadioGroup)
+Vue.use(RadioButton)
+Vue.use(Cascader)
+Vue.use(Checkbox)
+Vue.use(CheckboxButton)
+Vue.use(CheckboxGroup)
+Vue.use(Switch)
+Vue.use(Select)
+Vue.use(Option)
+Vue.use(OptionGroup)
+Vue.use(Button)
+Vue.use(ButtonGroup)
+Vue.use(Table)
+Vue.use(TableColumn)
+Vue.use(DatePicker)
+Vue.use(Form)
+Vue.use(FormItem)
+Vue.use(Tabs)
+Vue.use(TabPane)
+Vue.use(Tag)
+Vue.use(Alert)
+Vue.use(Slider)
+Vue.use(Icon)
+Vue.use(Row)
+Vue.use(Col)
+Vue.use(Upload)
+Vue.use(Badge)
+Vue.use(Collapse)
+Vue.use(CollapseItem)
+Vue.use(Transfer)
+Vue.use(Scrollbar)
+// Vue.use(Message);
+// Vue.use(MessageBox);
+Vue.use(Loading.directive)
