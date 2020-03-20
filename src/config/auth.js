@@ -5,7 +5,7 @@ const tokenKey = 'Authorization'
 /**
  * 从 cookie中 获取得到token
  */
-export function getToken () {
+export function getToken() {
   return Cookies.get(tokenKey) || ''
 }
 
@@ -13,7 +13,7 @@ export function getToken () {
  * 设置token到cookie中
  * @param {token value} tokenValue
  */
-export function setToken (tokenValue, flag) {
+export function setToken(tokenValue, flag) {
   return Cookies.set(
     tokenKey,
     tokenValue,
@@ -24,6 +24,6 @@ export function setToken (tokenValue, flag) {
 /**
  * 移除token
  */
-export function removeToken () {
+export function removeToken() {
   return Cookies.remove(tokenKey)
 }

@@ -1,7 +1,7 @@
-const throttle = function (fn, wait = 50, isDebounce, ctx) {
+const throttle = function(fn, wait = 50, isDebounce, ctx) {
   let timer
   let lastCall = 0
-  return function (...params) {
+  return function(...params) {
     if (isDebounce) {
       if (timer) clearTimeout(timer)
       timer = setTimeout(() => {
@@ -14,7 +14,7 @@ const throttle = function (fn, wait = 50, isDebounce, ctx) {
       fn.apply(ctx, params)
     }
   }
-};
+}
 
 export default {
   name: 'Throttle',
@@ -27,12 +27,12 @@ export default {
       default: false
     }
   },
-  created () {
+  created() {
     this.eventKeys = this.events.split(',')
     this.originMap = {}
     this.throttledMap = {}
   },
-  render () {
+  render() {
     const vnode = this.$slots.default[0]
     this.eventKeys.forEach(key => {
       const target = vnode.data.on[key]

@@ -1,8 +1,8 @@
 import axios from 'axios'
 import router from '@/router/index'
-import { getUrl } from '@/utils/path.js'
+import { getUrl } from '@/config/path'
 import { Message } from 'element-ui'
-import { getToken, removeToken } from '@/utils/auth'
+import { getToken, removeToken } from '@/config/auth'
 
 /* 基本配置 */
 axios.defaults.timeout = 6000 // 请求默认时间
