@@ -10,7 +10,6 @@ const routes = [
     name: '登录页',
     component: Login
   }
-
 ]
 
 const router = new VueRouter({

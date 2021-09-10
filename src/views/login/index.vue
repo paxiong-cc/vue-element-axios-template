@@ -1,14 +1,14 @@
 <template>
   <section class="login-container">
     <header class="head">
-      头
+
     </header>
 
-    <section class="body">
-      123
-    </section>
+    <div class="body">
+      123<div class="dd">头</div>
+    </div>
 
-    <footer class="foot">123</footer>
+    <h1>123133</h1>
   </section>
 </template>
 
@@ -18,9 +18,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .login-container {
-    @include flex($dr: column);
     height: 100%;
   }
 
@@ -30,7 +29,8 @@ export default {
   }
 
   .body {
-    flex: 1
+    flex: 1;
+    font-size: 30px
   }
 
   .foot {

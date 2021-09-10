@@ -6,12 +6,14 @@ import axios from 'axios'
 import '@/utils/element-ui'
 import { MessageBox, Message } from 'element-ui'
 import Throttle from '@/utils/throttle'
-
-import '@/axios'
+import api from '@/axios/requests.js'
+import 'lib-flexible'
+import '@/utils/flexible'
 
 Vue.prototype.$http = axios
 Vue.prototype.$confirm = MessageBox.confirm
 Vue.prototype.$message = Message
+Vue.prototype.$api = api
 
 Vue.component('Throttle', Throttle)
 

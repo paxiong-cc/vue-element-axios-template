@@ -1,13 +1,18 @@
-const ENV = {
-  // 正常命令
-  development: '',
-  production: '',
+let httpUrl = {
+  baseUrl: ''
+};
 
-  // 新配置命令
-  test: '',
-  prod: ''
+switch (process.env.VUE_APP_CURRENTMODE) {
+  case 'development':
+      // httpUrl.baseUrl = "http://10.0.0.61:8080/v2" //这里是本地的请求url
+      httpUrl.baseUrl = "http://10.0.60.27:8080/v2" //这里是本地的请求url
+      break
+  case 'test':
+      httpUrl.baseUrl = "https://web.seduclive.com/api" //这里是测试环境中的url
+      break
+  case 'production':
+      httpUrl.baseUrl = "https://www.110che.com/api" //生产环境url
+      break
 }
 
-export function getUrl() {
-  return ENV[process.env.VUE_APP_TITLE]
-}
+export default httpUrl;

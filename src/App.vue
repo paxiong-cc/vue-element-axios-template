@@ -5,13 +5,13 @@
 </template>
 
 <style lang="scss">
-  @import url('~@/styles/reset.scss');
+@import url('~@/styles/reset.scss');
 
-  html, body {
-    height: 100%;
-  }
+html, body {
+  height: 100%;
+}
 
-  #app {
-    height: 100%;
-  }
+#app {
+  height: 100%;
+}
 </style>

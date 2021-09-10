@@ -1,27 +1,23 @@
-## profile
-+ Vue-cli + element-ui + axios的简易架子
+#### store使用说明
+```
++ getter使用
 
-# front
+  import { mapGetters } from 'vuex'
+  computed: {
+    ...mapGetters([
+      'getIdentity', // getters中对应的命名
+    ])
+  }
 
-## Project setup
-```
-npm install
-```
+  使用方式：this.getIdentity
+  communityList: this.$store.getters.getCommunityLists
+  
++ actions使用
 
-### Compiles and hot-reloads for development
+  import { mapActions } from 'vuex'
+  methods: {
+  	...mapActions('user', ['setIdentity']), // user是modules中对应的文件名，setIdentity是user中actions中存在的方法
+  },
+  
+  使用方式： this.setIdentity()
 ```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
