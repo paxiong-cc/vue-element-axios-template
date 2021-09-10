@@ -1,7 +1,5 @@
 import axios from 'axios'
-import router from '@/router/index'
 import getUrl from '@/config/path'
-import { Message } from 'element-ui'
 
 /* 基本配置 */
 axios.defaults.timeout = 6000 // 请求默认时间
@@ -37,56 +35,55 @@ axios.interceptors.response.use(
  */
 export function get(url, params) {
   return new Promise((resolve, reject) => {
-      axios
-          .get(`${baseUrl}${url}`, {
-              params: params,
-          })
-          .then((res) => {
-              resolve(res.data);
-          })
-          .catch((err) => {
-              err.data && reject(err.data);
-          });
-  });
+    axios
+      .get(`${getUrl.baseUrl}${url}`, {
+        params: params
+      })
+      .then((res) => {
+        resolve(res.data)
+      })
+      .catch((err) => {
+        err.data && reject(err.data)
+      })
+  })
 }
 
 export function exportGet(url, params) {
   return new Promise((resolve, reject) => {
-      axios({
-          method: "GET",
-          url: `${baseUrl}${url}`,
-          params: params,
-          headers: {
-              "Content-Type": "application/x-www-form-urlencoded",
-          },
-          responseType: "blob",
+    axios({
+      method: 'GET',
+      url: `${getUrl.baseUrl}${url}`,
+      params: params,
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      responseType: 'blob'
+    })
+      .then((res) => {
+        resolve(res.data)
       })
-          .then((res) => {
-              resolve(res.data);
-          })
-          .catch((err) => {
-              err.data && reject(err.data);
-          });
-  });
+      .catch((err) => {
+        err.data && reject(err.data)
+      })
+  })
 }
 
 export function putBody(url, params) {
   return new Promise((resolve, reject) => {
-      axios({
-          method: "PUT",
-          url: `${baseUrl}${url}`,
-          data: params,
-          headers: {
-              "X-Requested-With": "XMLHttpRequest",
-              "Content-Type": "application/json; charset=UTF-8",
-              Authorization: store.state.user.Authorization,
-          },
+    axios({
+      method: 'PUT',
+      url: `${getUrl.baseUrl}${url}`,
+      data: params,
+      headers: {
+        'X-Requested-With': 'XMLHttpRequest',
+        'Content-Type': 'application/json; charset=UTF-8'
+      }
+    })
+      .then((res) => {
+        resolve(res.data)
       })
-          .then((res) => {
-              resolve(res.data);
-          })
-          .catch((err) => {
-              err.data && reject(err.data);
-          });
-  });
+      .catch((err) => {
+        err.data && reject(err.data)
+      })
+  })
 }
